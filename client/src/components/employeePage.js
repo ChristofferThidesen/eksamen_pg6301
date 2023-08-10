@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 const EmployeePage = () => {
   const [user, setUser] = useState(null);
   const [activities, setActivities] = useState([]);
@@ -152,6 +152,9 @@ const EmployeePage = () => {
           <p>Hours Logged: {submittedHours[index]}</p>
         </div>
       ))}
+      <Link to="/">
+        <button>Back Login</button>
+      </Link>
     </div>
   );
 };

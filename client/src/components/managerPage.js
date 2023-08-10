@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ManagerDashboard = () => {
   const [activities, setActivities] = useState([]);
@@ -10,7 +10,6 @@ const ManagerDashboard = () => {
     name: "",
     department: "",
   });
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch activities from backend
@@ -144,7 +143,9 @@ const ManagerDashboard = () => {
         />
         <button onClick={handleAddActivity}>Add Activity</button>
       </div>
-      <button onClick={() => navigate("/")}>Back</button>
+      <Link to="/managerLogin">
+        <button>Back to manager Login</button>
+      </Link>
     </div>
   );
 };
