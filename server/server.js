@@ -37,9 +37,9 @@ mongoose
     console.error("Error connecting to MongoDB:", error);
   });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/activities", activitiesRoutes);
 app.use("/api/log-hours", loggedHoursRoutes);
-app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
