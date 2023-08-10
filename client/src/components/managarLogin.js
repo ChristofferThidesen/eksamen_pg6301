@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom"; // Import useNavigate and Link
+import { useNavigate, Link } from "react-router-dom";
 
-const Login = () => {
+const ManagerLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/auth/login", {
+      const response = await axios.post("/api/auth/manager/login", {
         username,
         password,
       });
@@ -21,7 +21,7 @@ const Login = () => {
 
       if (response.data.message === "Login successful") {
         console.log(response.data);
-        navigate("/employeePage");
+        navigate("/managerPage"); // Replace with the desired manager dashboard route
       }
     } catch (error) {
       setMessage("Invalid credentials");
@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Manager Login</h2>
       <form onSubmit={handleLogin}>
         <div>
           <label>Username:</label>
@@ -51,12 +51,11 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
       <p>{message}</p>
-      {/* Add a link to the admin login page */}
-      <Link to="/managerLogin">
-        <button>Manager Login</button>
+      <Link to="/">
+        <button>Back</button>
       </Link>
     </div>
   );
 };
 
-export default Login;
+export default ManagerLogin;
