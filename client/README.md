@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# eksamen_pg6301
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Open and Start server
 
-## Available Scripts
+1. When you first open the project open the terminal and type "cd clint" this will change to the client directory, then type "npm i" to install all necessary dependencies
 
-In the project directory, you can run:
+2. type "cd .." to go back
 
-### `npm start`
+3. Then type "cd server" this will change to the server directory, then type "npm i" to install all necessary dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. inside the server directory type node seed.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. when you are inside of the server directory you can type "npm start" to start the server
 
-### `npm test`
+6. when you are inside of the client directory you can type "npm start" to start the server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Login
 
-### `npm run build`
+manager login:
+u: admin
+p: admin
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Employee login:
+u: employee
+p: password
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Endpoints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Authentication
 
-### `npm run eject`
+- **Endpoint:** `/api/auth`
+- **Description:** Provides authentication and user-related functionality.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Activities
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Endpoint:** `/api/activities`
+- **Description:** Manages activities available for employees to log hours.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Logged Hours
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Endpoint:** `/api/log-hours`
+- **Description:** Manages logged hours for activities by employees.
