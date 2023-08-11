@@ -8,7 +8,7 @@
 
 3. Then type "cd server" this will change to the server directory, then type "npm i" to install all necessary dependencies
 
-4. inside the server directory type node seed.js
+4. inside the server directory type "node seed.js" to download my mongoDB database
 
 5. when you are inside of the server directory you can type "npm start" to start the server
 
